@@ -50,6 +50,29 @@ Split dataset into 70% Training and 30% Testing
 🚀 Current Status
 
 🟢 Data preprocessing completed successfully.
-📌 Ready to move forward with EDA and Model Building.
+ 📊 Exploratory Data Analysis (EDA)
 
-✨ This repository will be updated as the project progresses.
+In this phase, we explored the dataset to understand patterns, relationships, and potential issues that may affect model performance.  
+ 🔍 Steps Performed in EDA
+- **Descriptive Statistics**: Generated summary statistics to understand central tendencies and distributions of features.  
+- **Distribution Analysis**: Visualized feature distributions (histograms, KDE plots) to detect skewness and scaling needs.  
+- **Correlation Analysis**: Created heatmaps and pairplots to identify relationships between features and the target variable.  
+- **Outlier Detection**: Checked for outliers using boxplots and statistical methods (IQR).  
+- **Class Balance Check**: Analyzed target variable distribution to ensure balanced representation after SMOTE.  
+- **Feature Importance (Preliminary)**: Used RandomForest to get early insights into most important features affecting water potability.  
+
+ 📈 Key Insights
+- Features like **pH, Sulfates, Trihalomethanes, Hardness, and Solids** showed stronger influence in distinguishing safe vs unsafe water.  
+- Some features (like Turbidity) showed weaker separation power.  
+- Scaling was necessary since features like **Solids and Conductivity** had very different ranges.  
+- Missing values were already imputed (median) in preprocessing, ensuring cleaner analysis.  
+- Outliers existed in features such as Trihalomethanes and Sulfates, but most were treated earlier.  
+🚦 Next Steps
+- Train multiple models (Logistic Regression, Decision Tree, Random Forest, XGBoost, etc.).  
+- Compare accuracy, precision, recall, and F1-score.  
+- Select the best-performing model for deployment.  
+
+---
+
+✨ This repository will be updated as the project progresses.  
+
